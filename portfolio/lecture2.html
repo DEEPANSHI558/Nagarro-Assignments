@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/4f67b81683.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  <style>
+    *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.banner{
+    width:100%;
+    height:100vh;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    display: flex;
+    position:relative;
+    border:4px solid black;
+  }
+    .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  font-size: 20px;
+  color:white;  
+  
+}
+.navbar li {
+  margin: 0px 8px 8px 0px;
+  padding: 20px;
+  list-style: none;
+}
+.navbar li a {
+  transition: color 0.5s, border-bottom 4s;
+  text-decoration: none;
+  color:white;
+}
+
+.navbar li a:hover {
+  color:white;
+  border-bottom: 1px solid white;
+}
+.text-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+.social-icons li a i{
+  border-radius: 60px;
+
+  color:black;
+}
+.social-icons li a i:hover {
+  box-shadow: 0px 0px 6px 4px rgba(15, 10, 10, 0.3);
+}
+
+i {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0 0 2px #888;
+  padding: 0.5em 0.6em;
+  font-size: 30px;
+}
+.logos {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.logos li {
+  display: inline-block;
+  margin: 0px 8px 8px 0px;
+  padding: 23px;
+  list-style: none;
+}
+    .b{
+        display: flex;
+    }
+#photo {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width:50%;
+}
+#photo img {
+  height: 400px;
+  width:inherit;
+  border-radius: 50%;
+ 
+}
+#a{
+    width:50%;
+}
+h1{
+    font-size:70px;
+    color:rgb(10, 54, 10);
+    
+}
+h1 >span{
+    color:red;
+}
+p{
+    font-size: 20px;
+    font-weight:800;
+}
+p>span{
+    color:rgb(240, 243, 86);
+   
+}
+button{
+    position: relative;
+    background-color:brown;
+    width:150px;
+    height:50px;
+    border-radius:50px;
+    box-shadow: 4px 0 4px #888;
+}
+@media(max-width: 1000px){
+	.b{
+		flex-direction: column-reverse;
+		align-items: center;
+		gap: 20px;
+	}
+    .banner{
+    height:100%;
+   
+  }
+#photo img {
+  height: 200px;
+  width:200px;
+  border-radius: 50%;
+ 
+}
+h1{
+    font-size:40px;
+    color:rgb(10, 54, 10);
+    
+}
+h1 >span{
+    color:red;
+}
+p{
+    font-size: 20px;
+    font-weight:800;
+}
+i {
+
+  font-size: 20px;
+}
+   
+}
+</style>
+</head>
+<body>
+  
+    <div >
+        <nav class="navbar">
+            <li>Port<span>folio</span></li>
+            <li><a href="#about-para">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </nav>
+        <div class="b banner">
+          <div id="a" class="logos" >
+              <h1>Hi, I'am</h1>
+              <h1>Deepanshi <span>Singh</span></h1><br>
+              <p>Summer Intern <span>@Nagarro</span> </p><br>
+             
+              <div class="social-icons logos">
+                <ul class="horizontal-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/deepanshi-singh-4a1a011b9/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a href="https://github.com/DEEPANSHI558" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a href="https://www.facebook.com/manishakhattar54">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a href="https://www.quora.com/profile/Manisha-Khattar" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+          </div>
+          <button >About Me</button>
+         </div>
+         <div id="photo" class="logos">
+             <img src="WhatsApp Image 2022-07-08 at 12.49.42 AM.jpeg" alt="">
+         </div>
+    </div>
+</div>
+</body>
+</html>

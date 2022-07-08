@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/4f67b81683.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<style>*{font-family: 'Nunito', sans-serif;}
+body{
+    background-color: crimson;
+    position: relative;
+}
+ .center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 40px;
+ }
+ button{
+     background-color: antiquewhite;
+     margin:20px 20px;
+     padding:10px;
+     border-radius: 10px;
+     font-size: 40px;
+ }
+ button >a{
+     text-decoration: none;
+      color:black;
+      font-weight: 600;
+ }
+ h1{
+     color:chartreuse;
+ }
+    </style>
+</head>
+<body>
+    <div class="center">
+     <h1>NAGARRO INTERNSHIP</h1>
+     <h2><i class="fas fa-university"></i>Bharati Vidyapeeth's College of Engineering</h2>
+    <h2><i class="fa fa-envelope" aria-hidden="true"></i>singhdeepanshi2403@gmail.com</h2>
+    </div>
+    
+    <div style="display: flex; justify-content: space-evenly;" class="center">
+        <button id="pokemon"><a href="./pokemon/task1.html">Pokemon Website</a></button>
+        <button id="portfolio"><a href="./portfolio/lecture2.html">Portfolio</a></button>
+    </div>
+    <script>
+       document
+    .getElementById("pokemon")
+    .addEventListener("click", function( e ){
+        if( ! confirm("Do you really want to do this?") ){
+            e.preventDefault();
+        }
+    });
+    document
+    .getElementById("portfolio")
+    .addEventListener("click", function( e ){ 
+        if( ! confirm("Do you really want to do this?") ){
+            e.preventDefault();
+        }
+    });
+
+</script>
+    </script>
+</body>
+</html>
