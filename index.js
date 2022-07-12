@@ -12,3 +12,10 @@
             e.preventDefault();
         }
     });
+    document
+    .getElementById("cricketapp")
+    .addEventListener("click", function( e ){ 
+        if( ! confirm("Do you really want to do this?") ){
+            e.preventDefault();
+        }
+    });
