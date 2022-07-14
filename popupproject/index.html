@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4f67b81683.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body>
+    <div class=" text-center mt-5" >
+        <button class="click">Click Me</button>
+    </div>
+     <div class="container" id="box">
+         <div class="one">
+             <div class="heading d-flex justify-content-between">
+                <h3 class="text-center mt-2">Enter Details</h3>
+                <div class="end"><i class="fa fa-times cross" ></i></div>
+             </div>
+            
+             <form action="#">
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    <input type="text" name="" id="username" class="form-control">
+                    <p id="uservalidation"></p>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text" name="" id="email"class="form-control">
+                    <p id="emailValidation"></p>
+                </div>
+                <input type="button" value="Submit" id="submit-btn" class="btn btn-primary mt-2 submission">
+             </form>
+           
+             <!-- validate form  -->
+             
+         </div>
+     </div>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script>
+         $(document).ready(function(){
+             $("#uservalidation").hide();
+             $("#emailValidation").hide();
+             $("#submit-btn").on('click',function(){
+                 if(validateform()){
+                    $("#box").removeClass('show');
+                 }
+             })
+    $(".click").on('click',function(){
+        $("#box").toggleClass("show");
+    })
+
+    $(".end").on('click',function(){
+        $("#box").removeClass('show');
+    })
+    var userNameError=true;
+    var emailError=true;
+
+
+
+    //username
+    $("#username").keyup(()=>{
+         validateUserName();
+    })
+    function validateUserName(){
+        var val=$("#username").val();
+        if(val.length===0){
+            $("#uservalidation").show();
+            $("#uservalidation").html("Username Cannot be empty");
+            $("#uservalidation").css("color","red");
+            userNameError=true;
+        }
+        else {
+            $("#uservalidation").hide();
+            userNameError=false;
+        }
+    }
+
+
+    // email validation
+    $("#email").keyup(()=>{
+         validateEmail();
+    })
+
+    function  validateEmail(){
+        var email=$("#email").val();
+        const emailRegex = new RegExp(
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+        if(email.length===0){
+            $("#emailValidation").show();
+            $("#emailValidation").html("Email cannot be empty");
+            emailError=true;
+        }
+        else if(!emailRegex.test(email)){
+            $("#emailValidation").show();
+            $("#emailValidation").html("Invalid Email");
+            $("#emailValidation").css("color","red");
+            emailError=true;
+        }
+        else{
+            
+            $("#emailValidation").hide();
+            emailError=false;
+        
+        }
+    
+    }
+
+    // submit
+    function validateform(){
+        validateUserName();
+        validateEmail();
+        if(userNameError||emailError){
+            return false;
+        }
+        else{return true;}
+    }
+})
+     </script>
+     <!-- <script src="script.js"></script> -->
+  
+    
+</body>
+</html>

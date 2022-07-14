@@ -1,0 +1,12 @@
+#box {
+  background-color: bisque;
+  height: 320px;
+  width: 500px;
+  visibility: hidden;
+}
+body {
+  background-color: aqua;
+}
+#box.show {
+  visibility: visible;
+}
