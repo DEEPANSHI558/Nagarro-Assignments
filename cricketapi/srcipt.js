@@ -26,14 +26,15 @@ get_btn.addEventListener('click',()=>{
                     </div>
                     <div class="d-flex justify-content-between">
                     <div class="d-flex flex-column small">
-                              <p><span class="bold">Runs:</span> ${element.score[0].r}</p>
-                              <p><span class="bold">Wickets:</span> ${element.score[0].w}</p>
-                              <p><span class="bold">Over:</span> ${element.score[0].o}</p>
+                              <p><span class="bold">Runs:</span> ${typeof element.score[0]==="undefined"?"" :element.score[0].r}</p>
+                              <p><span class="bold">Wickets:</span>${typeof element.score[0]==="undefined"?"" :element.score[0].w}</p>
+                              <p><span class="bold">Over:</span> ${typeof element.score[0]==="undefined"?"" :element.score[0].o}</p>
                     </div>
                     <div class="d-flex flex-column small">
-                    <p><span class="font-weight-bold">Runs:</span> ${element.score[1].r}</p>
-                    <p><span class="bold">Wickets:</span> ${element.score[1].w}</p>
-                    <p><span class="bold">Over:</span> ${element.score[1].o}</p>
+                    <p><span class="bold">Runs:</span> ${typeof element.score[1]==="undefined"?"" :element.score[1].r}</p>
+                    <p><span class="bold">Wickets:</span>${typeof element.score[1]==="undefined"?"" :element.score[1].w}</p>
+                    <p><span class="bold">Over:</span> ${typeof element.score[1]==="undefined"?"" :element.score[1].o}</p>
+                  
            </div>
                     
                  </div>
