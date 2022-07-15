@@ -4,9 +4,7 @@
   width: 500px;
   visibility: hidden;
 }
-body {
-  background-color: aqua;
-}
+
 #box.show {
   visibility: visible;
 }
