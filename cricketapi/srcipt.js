@@ -20,7 +20,7 @@ get_btn.addEventListener('click',()=>{
                             </div>
                             <div class="d-flex">
                           <p> ${element.teamInfo[1].shortname}</p>
-                          <img id=""src=${element.teamInfo[1].img} width="100px" height="100px">
+                          <img id=""src=${element.teamInfo[1].img} width="100px" height="100px" class="rounded-circle border ">
                    </div>
                    
                     </div>
