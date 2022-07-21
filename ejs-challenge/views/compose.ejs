@@ -1,0 +1,26 @@
+<%-include("partials/header")-%>
+<!-- as it is not a =durectly under the  views folder -->
+<div class="me">
+  <h1>Compose</h1>
+  <form action="/compose" method="post">
+    <div class="form-group">
+      <label for="">Title</label>
+      <input type="text" name="postTitle" id="" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="">Post</label>
+      <textarea
+        name="postBody"
+        id=""
+        cols="30"
+        rows="10"
+        class="form-control"
+      ></textarea>
+    </div>
+    <button type="submit" name="button" class="btn btn-lg btn-primary">
+      Publish
+    </button>
+  </form>
+</div>
+
+<%-include("partials/footer")-%>
