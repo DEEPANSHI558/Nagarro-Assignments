@@ -33,8 +33,11 @@
         font-family: "Nunito", sans-serif;
       }
       body {
-        background-color: crimson;
-        position: relative;
+        background: linear-gradient(
+          to right,
+          #d53369,
+          #cbad6d
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
       .center {
         display: block;
@@ -58,181 +61,186 @@
         font-weight: 600;
       }
       h1 {
-        color: chartreuse;
+        color: rgb(226, 235, 217);
+      }
+      #td {
+        width: 30vw;
       }
     </style>
   </head>
   <body>
-    <div class="center">
-      <h1>NAGARRO INTERNSHIP</h1>
-      <h2>
+    <div class="text-center bg-dark">
+      <h1 class="text-center">NAGARRO INTERNSHIP</h1>
+      <h2 class="text-center text-white">
         <i class="fas fa-university"></i>Bharati Vidyapeeth's College of
         Engineering
       </h2>
-      <h2>
+      <h2 class="text-center text-white">
         <i class="fa fa-envelope" aria-hidden="true"></i
         >singhdeepanshi2403@gmail.com
       </h2>
     </div>
-    <table class="table text-white">
-      <thead>
-        <th>Projects</th>
-        <th>Deployment</th>
-        <th>Github</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Pokemon Project</td>
-          <td>
-            <a href="./pokemon/task1.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/pokemon"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Portfolio</td>
-          <td>
-            <a href="./portfolio/lecture2.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/portfolio"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>ToDolist</td>
-          <td>
-            <a href="./todolist/index.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/todolist"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Cricket Api App</td>
-          <td>
-            <a href="./cricketapi/index.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/cricketapi"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Form Validation(Bootstrap+JQuery)</td>
-          <td>
-            <a href="./cricketapi/index" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/FormValidation(jquery)"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Pop Up Project</td>
-          <td>
-            <a href="./popupproject/index.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/popupproject"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Copy To Clipboard</td>
-          <td>
-            <a href="./copytoclipborad/index.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/copytoclipboard"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Microsoft Clone Tailwind</td>
-          <td>
-            <a href="./microsoft clone/index.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/microsoft\clone"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Weight Convertor</td>
-          <td>
-            <a href="./convertor/index.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/convertor"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-        <tr>
-          <td>Movie Search Project</td>
-          <td>
-            <a href="./movie/index.html" class="btn btn-success"
-              ><i class="fa-solid fa-link"></i
-            ></a>
-          </td>
-          <td>
-            <a
-              href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/movie"
-              class="btn btn-dark"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container d-flex justify-content-center">
+      <table class="table" id="td">
+        <thead>
+          <th>Projects</th>
+          <th>Deployment</th>
+          <th>Github</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pokemon Project</td>
+            <td>
+              <a href="./pokemon/task1.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/pokemon"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Portfolio</td>
+            <td>
+              <a href="./portfolio/lecture2.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/portfolio"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>ToDolist</td>
+            <td>
+              <a href="./todolist/index.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/todolist"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Cricket Api App</td>
+            <td>
+              <a href="./cricketapi/index.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/cricketapi"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Form Validation(Bootstrap+JQuery)</td>
+            <td>
+              <a href="./cricketapi/index" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/FormValidation(jquery)"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Pop Up Project</td>
+            <td>
+              <a href="./popupproject/index.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/popupproject"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Copy To Clipboard</td>
+            <td>
+              <a href="./copytoclipborad/index.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/copytoclipboard"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Microsoft Clone Tailwind</td>
+            <td>
+              <a href="./microsoft clone/index.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/microsoft\clone"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Weight Convertor</td>
+            <td>
+              <a href="./convertor/index.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/convertor"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Movie Search Project</td>
+            <td>
+              <a href="./movie/index.html" class="btn btn-success"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </td>
+            <td>
+              <a
+                href="https://github.com/DEEPANSHI558/Nagarro-Assignments/tree/main/movie"
+                class="btn btn-dark"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <!-- <div style="display: flex;flex-direction:column ;justify-content: center; align-items:center" class="center">
       
