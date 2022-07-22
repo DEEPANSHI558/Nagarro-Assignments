@@ -7,6 +7,7 @@ to right,
   background-image: url("https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&w=1600");
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 .card {
   width: 404px;
