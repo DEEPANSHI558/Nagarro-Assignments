@@ -29,62 +29,55 @@
     />
 
     <style>
-      * {
-        font-family: "Nunito", sans-serif;
-      }
       body {
         background: linear-gradient(
           to right,
           #d53369,
           #cbad6d
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        margin: 15px;
+        font-family: "Nunito", sans-serif;
+        background-repeat: none;
       }
-      .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        font-size: 1rem;
-      }
-      button {
-        background-color: antiquewhite;
-        margin: 20px 20px;
-        padding: 10px;
-        border-radius: 10px;
-        font-size: 1rem;
-        max-width: 200px;
-        width: 100%;
-      }
-      button > a {
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-      }
+
       h1 {
         color: rgb(226, 235, 217);
+      }
+      .container {
+        width: 100%;
+      }
+      .heading {
+        width: 100%;
       }
       #td {
         width: 30vw;
       }
+      .heading {
+        /* max-width: 4px; */
+        /* height: 400px; */
+        margin: auto;
+        border-radius: 20px;
+        transition: box-shadow 1s ease;
+      }
     </style>
   </head>
   <body>
-    <div class="text-center bg-dark">
-      <h1 class="text-center">NAGARRO INTERNSHIP</h1>
-      <h2 class="text-center text-white">
+    <div
+      class="heading d-flex flex-column overflow-hidden justify-content-center align-items-center"
+    >
+      <h1>NAGARRO INTERNSHIP</h1>
+      <h2 class="text-white">
         <i class="fas fa-university"></i>Bharati Vidyapeeth's College of
         Engineering
       </h2>
-      <h2 class="text-center text-white">
+      <h2 class="text-white">
         <i class="fa fa-envelope" aria-hidden="true"></i
         >singhdeepanshi2403@gmail.com
       </h2>
-    </div>
-    <div class="container d-flex justify-content-center">
-      <table class="table" id="td">
+      <table id="td">
         <thead>
           <th>Projects</th>
-          <th>Deployment</th>
+          <th>Link</th>
           <th>Github</th>
         </thead>
         <tbody>
