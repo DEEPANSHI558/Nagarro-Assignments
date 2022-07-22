@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      button {
+        width: 60px;
+        height: 60px;
+      }
+      #in {
+        width: 100%;
+        height: 60px;
+        text-align: right;
+        font-size: 30px;
+        border: 2px solid black;
+      }
+      #equal-btn {
+        width: 100%;
+        background-color: rgba(11, 11, 168, 0.952);
+        color: white;
+        font-size: 40px;
+      }
+      .num button {
+        width: 70px;
+        height: 60px;
+        font-size: 30px;
+        margin-top: 0.75rem;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 5px;
+        background-color: darkgoldenrod;
+      }
+      .operations button {
+        width: 70px;
+        height: 60px;
+        margin-top: 0.75rem;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 30px;
+        border-radius: 5px;
+        background-color: darkgoldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <div class="d-flex flex-column mt-5 bg-dark">
+        <div class="input p-2">
+          <div id="in" class="bg-light"></div>
+        </div>
+        <div class="calc d-flex flex-column">
+          <div class="operations d-flex justify-content-between">
+            <button value="+">+</button>
+            <button value="-">-</button>
+            <button value="*">*</button>
+            <button value="/">/</button>
+          </div>
+          <div class="num d-flex justify-content-between">
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button value="4">4</button>
+          </div>
+          <div class="num d-flex justify-content-between">
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button value="7">7</button>
+            <button value="8">8</button>
+          </div>
+          <div class="num d-flex justify-content-between">
+            <button value="9">9</button>
+            <button value="0">0</button>
+            <button value=".">.</button>
+            <button value="AC">AC</button>
+          </div>
+        </div>
+        <div class="equal mx-2 mt-3">
+          <button id="equal-btn" value="=">=</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const num = document.querySelectorAll(".num button");
+      const input = document.querySelector("#in");
+      const operators = document.querySelectorAll(".operations button");
+      num.forEach((item) => {
+        item.addEventListener("click", function () {
+          if (item.value == "AC") {
+            input.innerHTML = "";
+          } else {
+            input.innerHTML += item.value;
+          }
+        });
+      });
+      operators.forEach((item) => {
+        item.addEventListener("click", function () {
+          var currString = input.innerHTML;
+          console.log(currString);
+          var lastElement = currString[currString.length - 1];
+          if (
+            lastElement === "+" ||
+            lastElement === "-" ||
+            lastElement === "*" ||
+            lastElement === "/"
+          ) {
+            var newString =
+              currString.substring(0, currString.length - 1) + item.value;
+            input.innerHTML = newString;
+          } else {
+            input.innerHTML += item.value;
+          }
+        });
+      });
+      const btn = document.querySelector("#equal-btn");
+      btn.addEventListener("click", function () {
+        input.innerHTML = eval(input.innerHTML);
+      });
+    </script>
+  </body>
+</html>
