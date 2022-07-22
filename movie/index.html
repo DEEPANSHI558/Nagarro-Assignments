@@ -58,7 +58,8 @@
         $("#click").on("click", function () {
           const movie = $("#movieName").val();
           console.log(movie);
-          const url = "http://www.omdbapi.com/?t=" + movie + "&apikey=c57d2541";
+          const url =
+            "https://www.omdbapi.com/?t=" + movie + "&apikey=c57d2541";
           console.log(url);
           fetch(url)
             .then((res) => res.json())
