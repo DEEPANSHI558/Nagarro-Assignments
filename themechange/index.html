@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(
+        to right,
+        #c6ffdd,
+        #fbd786,
+        #f7797d
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .buttons {
+      display: flex;
+      border-bottom: 2px solid black;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .buttons button {
+      width: 70px;
+      height: 40px;
+
+      margin-bottom: 15px;
+      margin-top: 25px;
+      font-weight: 500;
+      border: none;
+    }
+    #blue {
+      background-color: rgba(30, 30, 145, 0.952);
+    }
+    #green {
+      background-color: rgba(10, 105, 10, 0.712);
+    }
+    #yellow {
+      background-color: rgb(233, 233, 98);
+    }
+    #black {
+      background-color: rgb(37, 26, 26);
+    }
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid black;
+      background-color: rgba(30, 30, 145, 0.959);
+      color: white;
+      height: 80vh;
+    }
+    #text {
+      color: white;
+      background-color: rgba(30, 30, 145, 0.678);
+      /* font-size: 20px; */
+      border: 2px solid white;
+      outline: none;
+      box-shadow: none;
+      /* padding: 5px; */
+      font-family: cursive;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="buttons">
+        <div><button id="blue"></button></div>
+        <div><button id="green"></button></div>
+        <div><button id="yellow"></button></div>
+        <div><button id="black"></button></div>
+      </div>
+      <div class="center">
+        <textarea name="" id="text" cols="80" rows="20"></textarea>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#blue").on("click", function () {
+          $("#text").css("border", "2px solid white");
+          $("#text").css("color", "white");
+          $("#text").css("background-color", "rgba(30, 30, 145)");
+          $(".center").css("background-color", "rgba(30, 30, 145)");
+        });
+        $("#green").on("click", function () {
+          $("#text").css("border", "2px solid black");
+          $("#text").css("color", " black");
+          $("#text").css("background-color", "rgba(10, 105, 10)");
+          $(".center").css("background-color", "rgba(10, 105, 10)");
+        });
+        $("#yellow").on("click", function () {
+          $("#text").css("border", "2px solid black");
+          $("#text").css("color", " black");
+          $("#text").css("background-color", "rgb(233, 233, 98)");
+          $(".center").css("background-color", "rgb(233, 233, 98)");
+        });
+        $("#black").on("click", function () {
+          $("#text").css("border", "2px solid white");
+          $("#text").css("color", " white");
+          $("#text").css("background-color", "rgb(37, 26, 26)");
+          $(".center").css("background-color", "rgb(37, 26, 26)");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/4f67b81683.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="corousel" data-corosel>
+      <button class="corosel-button prev" data-corosel-button="prev">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button class="corosel-button next" data-corosel-button="next">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="images/pexels-jaime-reimer-2662116.jpg" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/pexels-lumn-167699.jpg" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/pexels-pixabay-235621.jpg" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/pexels-roberto-nickson-2775196.jpg" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/pexels-tatiana-syrikova-3934023.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex justify-content-center" style="font-size: 20px">
+      IMAGE SLIDER
+    </div>
+    <script src="./script.js"></script>
+    <!-- <script>
+      const buttons = document.querySelectorAll("[data-corosel-button]");
+      console.log(buttons);
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const offset = button.dataset.coroselButton === "prev" ? -1 : 1;
+          const slides = button
+            .closest("[data-corosel]")
+            .querySelector("[data-slides]");
+          const activeSlide = slides.querySelector("[data-active]");
+          let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+          if (newIndex < 0) newIndex = slides.children.length - 1;
+          if (newIndex >= slides.children.length) newIndex = 0;
+          slides.children[newIndex].dataset.active = true;
+          delete activeSlide.dataset.active;
+        });
+      });
+    </script> -->
+  </body>
+</html>
