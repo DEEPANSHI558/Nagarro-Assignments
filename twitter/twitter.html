@@ -29,15 +29,16 @@
         color: white;
       }
       .cont {
-        /* border: 2px solid black; */
-        /* /* height: 90vh; */
         flex-direction: row-reverse;
       }
       .photo {
         width: 56%;
       }
-      .photo img {
-        height: 900px;
+      .photo > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       .info {
         width: 44%;
@@ -64,17 +65,14 @@
       }
       .buttons {
         color: black;
-        width: 40%;
+        /* width: 40%; */
       }
       @media (max-width: 840px) {
         .cont {
           flex-direction: column;
         }
         .photo {
-          width: 100%;
-        }
-        .buttons {
-          width: 80%;
+          width: 100vw;
         }
       }
     </style>
@@ -90,33 +88,21 @@
             Happening Now
           </div>
           <div class="join fs-1 fw-bold">Join twitter Today</div>
-          <div class="buttons d-flex flex-column" style="width: 40%">
-            <button
-              class="btn mb-2 btn-outline-secondary rounded-pill"
-              type="submit"
+          <div>
+            <a href="#" class="btn rounded-pill text-white"
+              >Sign up with Google</a
             >
-              <i class="fab fa-facebook-f me-2"></i>Sign in with google
-            </button>
-            <button
-              class="btn mb-2 btn-outline-secondary rounded-pill"
-              type="submit"
-            >
-              <i class="fab fa-facebook-f me-2"></i>Sign in with facebook
-            </button>
           </div>
+
           <div class="d-flex" style="width: 40%">
             <div class="w-50"><hr /></div>
             <div>or</div>
             <div class="w-50"><hr /></div>
           </div>
-          <div style="width: 40%">
-            <button
-              type="submit"
-              class="btn btn-primary rounded-pill"
-              style="width: 100%"
+          <div>
+            <a href="#" class="btn btn-primary rounded-pill">
+              Sign up with a phone number or email</a
             >
-              Sign up with a phone number or email
-            </button>
             <p style="font-size: 12px; margin-top: 10px">
               By signing up, you agree to the
               <span class="c">Terms of Service</span> and
@@ -127,25 +113,20 @@
 
           <br />
           <br />
-          <div class="account" style="width: 50%">
+          <div class="account">
             <div class="fw-bold">Already have an account?</div>
             <div>
-              <button
-                type="button"
+              <div
                 class="btn btn-light rounded-pill fw-bold btn-outline-secondary mt-1"
-                style="width: 80%"
               >
                 Sign in
-              </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="photo overflow-hidden">
-        <img
-          src="https://blog.ipleaders.in/wp-content/uploads/2021/07/twitter-1-1601019024.jpg"
-          alt="twitter_photo"
-        />
+      <div class="photo">
+        <img src="./images/tweet-g787475f3a_1280.png" alt="twitter_photo" />
       </div>
     </div>
     <footer class="d-flex justify-content-around footer flex-wrap">

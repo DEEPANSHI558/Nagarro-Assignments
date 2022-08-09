@@ -24,187 +24,518 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      .navigation {
-        padding: 20px;
+     
+     html{
+    width: 100%;
+}
+body {
+  margin: 0;
+  padding:0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#top-container {
+  background-color: #141414;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sale {
+  background-color: #ff0000;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #000;
+}
+
+.nav-brand {
+  width: 20%;
+}
+
+.nav-brand a,
+.nav-brand img {
+  width: 30%;
+}
+
+.nav-links {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 1.5rem 0;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.75);
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+  z-index: 2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content ul li {
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  text-decoration: none;
+  color: #bbb;
+}
+
+.nav-icons {
+  width: 25%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav-icons span {
+  margin: 0 0.75rem;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.nav-icons input {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  padding-left: 2rem;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+.search-icon {
+  color: #777;
+  position: absolute;
+    top: 50%;
+    left: .5rem;
+    transform: translateY(-50%);
+}
+      .corousel li {
+        list-style: none;
       }
-      img {
-        height: 50vh;
+      .corousel {
+        width: 100vw;
+        height: 70vh;
+        position: relative;
       }
-      .watches img {
-        height: 20vh;
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: 500ms opacity ease-in-out;
+        transition-delay: 500ms;
       }
-      .heading {
-        font-weight: 700;
-        font-size: 40px;
+      .slide > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
       }
+      .slide[data-active] {
+        opacity: 1;
+        z-index: 1;
+        transition-delay: 0ms;
+      }
+      .corosel-button {
+        z-index: 2;
+        position: absolute;
+        background: none;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 2rem;
+        border: none;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        padding: 0 0.5rem;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .corosel-button:hover,
+      .corosel-button:focus {
+        outline: none;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .corosel-button:focus {
+        border: 1px solid black;
+      }
+      .corosel-button.prev {
+        left: 1rem;
+      }
+      .corosel-button.next {
+        right: 1rem;
+      }
+      /* navbar */
+      .navigation{
+       
+        background-color: black;
+        color:white;
+        padding:1rem;
+      }
+      .shop div,.account div{
+        margin-left:20px;
+      }
+      .logo img{
+        width:80px;
+        height:30px;
+        object-fit:cover;
+      }
+      .announcement_bar{
+        background-color: red;
+
+      }
+      #midcontainer{
+       background-color: #000;
+     }
+     .mid-heading{
+       font-size: 40px;
+       font-weight:700;
+       color:white;
+       text-align: center;
+     }
+      #productcontainer{
+        display:flex;
+        align-items: center;
+        justify-content:space-evenly;
+        overflow: hidden;
+        flex-wrap: wrap;
+        padding:0.5 rem;
+      }
+      .product-card{
+        display:flex;
+        flex-direction: column;
+        background-color: #e3e3e3;
+        width:400px;
+        padding:1rem;
+        border-radius:10px;
+      }
+      .product-img img{
+        width:100%;
+        height:300px;
+      }
+      .prod-description{
+       background-color:white;
+       border-radius: 5px;
+      
+       width:100%;
+     }
+      .prod-text{
+        color:#000;
+        font-size:20px;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+      .product-price{
+             display: flex;
+             
+      }
+      .discount-price{
+        color:red;
+        font-weight: bold;
+        margin-left: 5px;
+        margin-right:5px;
+      }
+      .old-price{
+        text-decoration: line-through;
+      }
+      .saving{
+        font-size: 12px;
+      }
+      .add-to-cart{
+        width:100%;
+        background-color: #ff0000e8;
+        color:white;
+        border: none;
+        font-weight: bold;
+        padding:0.5rem;
+      
+       
+      }
+     
+    
+     
+    
+      
     </style>
   </head>
   <body>
-    <div class="navigation d-flex justify-content-between bg-dark text-white">
-      <div class="log">Boat</div>
-      <div class="shop d-flex">
-        <div class="mx-3">Shop</div>
-        <div class="mx-3">Daily Deals</div>
-        <div class="mx-3">Offer Zone</div>
-        <div class="mx-3">More</div>
+     <!-- <div class="announcement_bar d-flex flex-wrap justify-content-center align-items-center  pt-3 text-white text-center"><p>This Rakhi, tie a smartwatch and empower them with precise health insights, starting @ ₹1799. Shop NOW!</p></div> -->
+    <!-- <div class="navigation d-flex  justify-content-between">
+      <div class="logo"><img src="images/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.webp" alt=""></div>
+      <div class="shop d-flex ">
+        <div>Shop</div>
+        <div>About</div>
+        <div>Watches</div>
+        <div class="dropdown">
+          <a href="#">More <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content">
+            <ul>
+              <li>
+                <a href="#">Gifting</a>
+              </li>
+              <li>
+                <a href="#">Do What Floats Your boAt</a>
+              </li>
+              <li>
+                <a href="#">Blogs</a>
+              </li>
+              <li>
+                <a href="#">Meet the boAtheads</a>
+              </li>
+              <li>
+                <a href="#">Corporate Orders</a>
+              </li>
+              <li>
+                <a href="#">Earn Rs.100</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Social Responsibility</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="d-flex mx-11">
-        <input type="text" placeholder="Search....." class="rounded-pill" />
-        <div class="mx-3">Account</div>
-        <div class="mx-3">Card</div>
-        <div class="mx-3">Cart</div>
+      <div class="account d-flex">
+        <div>Account</div>
+        <div>Gift</div>
+        <div>Cart</div>
       </div>
+    </div>  -->
+    <section id="top-container">
+      <a href="#" class="sale-link">
+        <div class="sale">
+          <span
+            >This Rakhi, tie a smartwatch and empower them with precise health insights, starting @ ₹1799. Shop NOW!
+            🛍️</span
+          >
+        </div>
+      </a>
+      <nav>
+        <div class="nav-brand">
+          <a href="index.html">
+            <img src="./images/Boat-Logo_200x_200x_f9c79bf9-9c9a-477d-ab6a-7c889a1f2f70_170x.webp" alt="logo" />
+          </a>
+        </div>
+        <div class="nav-links">
+          <span class="nav-link"
+            ><a href="#"> Shop <i class="fa-solid fa-angle-down"></i> </a
+          ></span>
+          <span class="nav-link"><a href="#">Daily Deals</a></span>
+          <span class="nav-link"><a href="#">Offer Zone</a></span>
+          <div class="dropdown nav-link">
+            <a href="#"> More <i class="fa-solid fa-angle-down"></i> </a>
+            <div class="dropdown-content">
+              <ul>
+                <li>
+                  <a href="#">Gifting</a>
+                </li>
+                <li>
+                  <a href="#">Do What Floats Your boAt</a>
+                </li>
+                <li>
+                  <a href="#">Blogs</a>
+                </li>
+                <li>
+                  <a href="#">Meet the boAtheads</a>
+                </li>
+                <li>
+                  <a href="#">Corporate Orders</a>
+                </li>
+                <li>
+                  <a href="#">Earn Rs.100</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Social Responsibility</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-icons">
+          <span>
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Search..." />
+          </span>
+          <span>
+            <a href="#"><i class="fa fa-user"></i></a>
+          </span>
+          <span>
+            <a href="#"><i class="fa-solid fa-gift"></i></a>
+          </span>
+          <span>
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+          </span>
+        </div>
+      </nav>
+     <div class="corousel" data-corosel>
+      <button class="corosel-button prev" data-corosel-button="prev">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button class="corosel-button next" data-corosel-button="next">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="images/Collection-Banner_346efdc6-82b3-4370-87b9-e018fe298c09_2000x.webp" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/A121-website-banner_2000x.webp" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/Stone-Speakers_Catgry-web_5ddac427-ef95-4cc3-bcd7-5f08ab93359d.webp" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/pexels-roberto-nickson-2775196.jpg" alt="" />
+        </li>
+        <li class="slide">
+          <img src="images/pexels-tatiana-syrikova-3934023.jpg" alt="" />
+        </li>
+      </ul>
     </div>
+    </section> 
+    <section id="midcontainer">
+       <p class="mid-heading">SAIL With boAt</p>
+       <div id="productcontainer">
+          <div class="product-card">
+                <div class="product-img">
+                  <img src="./images/1_05260e43-8f0b-4776-a433-ea2089c7f7e7_600x.webp" alt="">
+                </div>
+                <div class="prod-description">
+                  <a href="#">
+                    <p class="prod-text">boAt Airpods 141 Pro</p>
+                  </a>
+                  <hr>
+                  <span class="product-price">
+                    <span class="discount-price">₹ 1,099</span>
+                    <span class="old-price">₹ 2,990</span>
+                  </span>
+                  <div class="saving">You Save: ₹ 1891 (63%)</div>
+                  <button class="add-to-cart">ADD TO CART</button>
+                </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="./images/1_05260e43-8f0b-4776-a433-ea2089c7f7e7_600x.webp" alt="">
+            </div>
+            <div class="prod-description">
+              <a href="#">
+                <p class="prod-text">boAt Airpods 141 Pro</p>
+              </a>
+              <hr>
+              <span class="product-price">
+                <span class="discount-price">₹ 1,099</span>
+                <span class="old-price">₹ 2,990</span>
+              </span>
+              <div class="saving">You Save: ₹ 1891 (63%)</div>
+              <button class="add-to-cart">ADD TO CART</button>
+            </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img">
+          <img src="./images/1_05260e43-8f0b-4776-a433-ea2089c7f7e7_600x.webp" alt="">
+        </div>
+        <div class="prod-description">
+          <a href="#">
+            <p class="prod-text">boAt Airpods 141 Pro</p>
+          </a>
+          <hr>
+          <span class="product-price">
+            <span class="discount-price">₹ 1,099</span>
+            <span class="old-price">₹ 2,990</span>
+          </span>
+          <div class="saving">You Save: ₹ 1891 (63%)</div>
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+  </div>
+  <div class="product-card">
+    <div class="product-img">
+      <img src="./images/1_05260e43-8f0b-4776-a433-ea2089c7f7e7_600x.webp" alt="">
+    </div>
+    <div class="prod-description">
+      <a href="#">
+        <p class="prod-text">boAt Airpods 141 Pro</p>
+      </a>
+      <hr>
+      <span class="product-price">
+        <span class="discount-price">₹ 1,099</span>
+        <span class="old-price">₹ 2,990</span>
+      </span>
+      <div class="saving">You Save: ₹ 1891 (63%)</div>
+      <button class="add-to-cart">ADD TO CART</button>
+    </div>
+</div>
+       </div>
+    </section>
+    <section id="bottomcontainer">
 
-    <div
-      id="carouselExampleCaptions"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="../portfolio/WhatsApp Image 2022-07-08 at 12.49.42 AM.jpeg"
-            class="d-block w-100"
-            alt="..."
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="../portfolio/WhatsApp Image 2022-07-08 at 12.49.42 AM.jpeg"
-            class="d-block w-100"
-            alt="..."
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="../portfolio/WhatsApp Image 2022-07-08 at 12.49.42 AM.jpeg"
-            class="d-block w-100"
-            alt="..."
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <div class="launch bg-dark">
-      <div
-        class="heading d-flex justify-content-center align-items-center text-white"
-      >
-        Biggest Dopest Launches
-      </div>
-      <div class="watches d-flex justify-content-between">
-        <div class="card" style="width: 18rem">
-          <img
-            src="http://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-images.png?v=1655198531"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img
-            src="http://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-images.png?v=1655198531"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img
-            src="http://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-images.png?v=1655198531"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img
-            src="http://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-images.png?v=1655198531"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+    </section>
+  
       </div>
     </div>
+    <script>
+      const buttons = document.querySelectorAll("[data-corosel-button]");
+      console.log(buttons);
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const offset = button.dataset.coroselButton === "prev" ? -1 : 1;
+          const slides = button
+            .closest("[data-corosel]")
+            .querySelector("[data-slides]");
+          const activeSlide = slides.querySelector("[data-active]");
+          let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+          if (newIndex < 0) newIndex = slides.children.length - 1;
+          if (newIndex >= slides.children.length) newIndex = 0;
+          slides.children[newIndex].dataset.active = true;
+          delete activeSlide.dataset.active;
+        });
+      });
+    </script>
   </body>
 </html>
